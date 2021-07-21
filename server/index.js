@@ -5,6 +5,7 @@ const path = require('path');
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+var views = 0;
 var cookieSession = require('cookie-session')
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, '../client/build')));
@@ -18,10 +19,10 @@ app.use(cookieSession({
 }));
 //api is the route, req is the request and res is our response
 app.get("/test",(req,res,next) => {
-  req.session.views = (req.session.views || 0) + 1;
+  views++;
   res.json({
     message: 'sent the view count',
-    views: req.session.views + ' views',
+    views: views + ' views',
     id: req.session.id,
   });
 });
