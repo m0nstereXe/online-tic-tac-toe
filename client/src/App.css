@@ -6,12 +6,16 @@
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ligma
+{
+  width: 25vw;
+  height: 10vh;
+  margin-left: 32.5vh;
+  align-items: middle;
+  justify-content: middle;
+  font-size: 30px;
 }
+
 .App
 {
     border-width: 0px;
@@ -44,11 +48,31 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 0px;
+}
+.game-info
+{
+  margin-top: 4vh;
+}
+.game-board{
+  margin-left: 35vw;
+}
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.square {
+  height: 10vw;
+  width: 10vw;
+  background: #fff;
+  float: left;
+  border: 1px solid #999;
+  font-size: 34px;
+  font-weight: bold;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
 }

@@ -1,0 +1,14 @@
+In server, maintain list of active games
+  boardstate, 1 or 2 players?
+  each item in the list is a button and if u click on a game with one player it should put you in that game!
+
+Create btn that creates a new game then sends that 2 server
+  server should tell u if u are X or O and then add ur game to the game list
+
+Server should send the game list to every user not in a game once every 10 seconds
+
+somehow figure out the difference between 2 users
+
+
+
+EVERY SESSION HAS ITS OWN ID
