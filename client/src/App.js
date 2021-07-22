@@ -154,23 +154,23 @@ ReactDOM.render(
 
 function PracticetBtn(props) {
   return (
-    <button className="ligma" onClick={props.onClick}>
-      {props.data ? props.data : 'fuck'}
+    <button className="ligma" onClick={() => alertID(props.data)}>
+      {props.data ? props.data[1] : 'fucked up'}
     </button>
   );
 }
-function test()
+function alertID(data)
 {
-  alert("test");
+  alert("Your ID is: " + data[2]);
 }
 function App() {
   const [data, setData] = React.useState(null);
   React.useEffect(() => {
     fetch("/test")
       .then((res) => res.json())
-      .then((data) => setData(data.views));
+      .then((data) => setData(data.data));
+    //alert(res);
   },[]);
-
   //{!data ? "Loading..." : data}   how to use data from server
   return (
     <div className="App">
@@ -183,9 +183,9 @@ function App() {
         </h2>
       </header>
       <body className="App-body">
-        <PracticetBtn onClick={() => test()}
+        <PracticetBtn onClick={(data)=>alertID(data)}
         className="cookie-test"
-        data={data}
+        data={data ? data : "shit"}
          />
       </body>
     </div>
