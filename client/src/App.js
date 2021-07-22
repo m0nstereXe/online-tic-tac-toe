@@ -183,10 +183,9 @@ function App() {
         </h2>
       </header>
       <body className="App-body">
-        <PracticetBtn onClick={(data)=>alertID(data)}
-        className="cookie-test"
-        data={data ? data : "shit"}
-         />
+      <PracticetBtn onClick={(data)=>alertID(data)}
+      data={data ? data : "shit"}
+       />
       </body>
     </div>
   );

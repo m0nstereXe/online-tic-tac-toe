@@ -22,7 +22,7 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
   app.use(cookieSession({
     name: 'session',
     keys: ['key1','key2'],
-    maxAge: 30000,
+    maxAge: 300000,
 }));
 //api is the route, req is the request and res is our response
 app.get("/test",(req,res,next) => {
